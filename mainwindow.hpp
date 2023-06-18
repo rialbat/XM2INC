@@ -23,9 +23,6 @@ public:
 private:
     Ui::MainWindow *ui;
 
-    void replaceText(QFile file);
-
-private:
-    FILE *inputFile;
+    QString replaceText(QString str);
 };
 #endif // MAINWINDOW_HPP
