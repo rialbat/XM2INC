@@ -7,6 +7,7 @@
 #include <QCoreApplication>
 #include <QRegularExpression>
 #include <QDebug>
+#include <QFileDialog>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -23,6 +24,12 @@ public:
 private:
     Ui::MainWindow *ui;
 
-    QString replaceText(QString str);
+    QStringList replaceText(QString str);
+    void extractFromBin(QFile file);
+
+private slots:
+    void openFromFile();
+    void saveToFile();
+    void convertFile();
 };
 #endif // MAINWINDOW_HPP
