@@ -9,6 +9,9 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->inputPushButton, SIGNAL(clicked()), this, SLOT(openFromFile()));
     connect(ui->outputPushButton, SIGNAL(clicked()), this, SLOT(saveToFile()));
     connect(ui->processPushButton, SIGNAL(clicked()), this, SLOT(convertFile()));
+    connect(ui->XMToolButton, SIGNAL(clicked()), this, SLOT(XMDialog()));
+    connect(ui->HEXToolButton, SIGNAL(clicked()), this, SLOT(HEXDialog()));
+    connect(ui->actionAbout, SIGNAL(triggered()), this, SLOT(AboutDialog()));
 }
 
 MainWindow::~MainWindow()
@@ -76,6 +79,9 @@ void MainWindow::extractFromBin(QFile file)
        outFile.close();
 
        file.close();
+
+       QMessageBox::information(this, "Result",
+                                "The conversion was successful.");
 }
 
 void MainWindow::openFromFile()
@@ -139,7 +145,32 @@ void MainWindow::convertFile()
             }
 
             outFile.close();
+
+            QMessageBox::information(this, "Result",
+                                     "The conversion was successful.");
         }
     }
+    else{
+        QMessageBox::warning(this, "Warning",
+                                 "You need to specify the file paths.");
+    }
 
+}
+
+void MainWindow::XMDialog()
+{
+    QMessageBox::information(this, "Conversion from .xm",
+                             "This option allows you to convert a binary .xm file to .inc file.");
+}
+
+void MainWindow::HEXDialog()
+{
+    QMessageBox::information(this, "Conversion from HEX data",
+                             "This option allows you to convert raw file with data like \"0x12, 0xAC, 0x74 ...\" to .inc file.");
+}
+
+void MainWindow::AboutDialog()
+{
+    QMessageBox::information(this, "About program",
+                             "MIT License\nCopyright (c) 2023 rialbat");
 }

@@ -8,6 +8,7 @@
 #include <QRegularExpression>
 #include <QDebug>
 #include <QFileDialog>
+#include <QMessageBox>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -31,5 +32,9 @@ private slots:
     void openFromFile();
     void saveToFile();
     void convertFile();
+
+    void XMDialog();
+    void HEXDialog();
+    void AboutDialog();
 };
 #endif // MAINWINDOW_HPP

@@ -31,6 +31,10 @@
   <property name="windowTitle">
    <string>XM2INC</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="images.qrc">
+    <normaloff>:/images/Logo.png</normaloff>:/images/Logo.png</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true">*{
 	background:rgb(255,255,255);
@@ -111,6 +115,11 @@ QRadioButton
 {
 	font-size:12px;
 	font-family:Century Gothic, sans-serif;
+}
+QMenu::item:selected
+{
+	background-color:rgb(204,232,255);
+	color:rgb(0,0,0);
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -154,7 +163,7 @@ QRadioButton
             </widget>
            </item>
            <item>
-            <widget class="QToolButton" name="HEXToolButton_2">
+            <widget class="QToolButton" name="HEXToolButton">
              <property name="text">
               <string>?</string>
              </property>
@@ -272,10 +281,6 @@ QRadioButton
    </layout>
    <zorder>settingsGroupBox</zorder>
    <zorder>processPushButton</zorder>
-   <zorder>inputLineEdit</zorder>
-   <zorder>outputLineEdit</zorder>
-   <zorder>inputLabel</zorder>
-   <zorder>outputLabel</zorder>
    <zorder></zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -308,7 +313,9 @@ QRadioButton
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>actionExit</sender>
