@@ -26,21 +26,21 @@ cmake --build . -- target all
 1. After opening the program, specify the path to the input file and the place where you want to save the result.
 
 <p align="center">
-  <img src="https://github.com/rialbat/XM2INC/blob/main/images/MainWindow.png?raw=true" width="300"/>
+  <img src="https://github.com/rialbat/XM2INC/blob/master/images/MainWindow.png?raw=true" width="300"/>
 </p>
 
 2. Select the desired conversion mode:
 <ol style="list-style-type: lower-alpha">
   <li>Conversion from a binary file to .inc:</li>
   <p align="center">
-  <img src="https://github.com/rialbat/XM2INC/blob/main/images/Result1.png?raw=true" width="300"/>
+  <img src="https://github.com/rialbat/XM2INC/blob/master/images/Result1.png?raw=true" width="300"/>
 </p>
   <li>Converting from a text file to .inc:</li>
   <p align="center">
-  <img src="https://github.com/rialbat/XM2INC/blob/main/images/Result2.png?raw=true" width="300"/>
+  <img src="https://github.com/rialbat/XM2INC/blob/master/images/Result2.png?raw=true" width="300"/>
 </p>
 <p align="center">
-  <img src="https://github.com/rialbat/XM2INC/blob/main/images/Result3.png?raw=true" width="300"/>
+  <img src="https://github.com/rialbat/XM2INC/blob/master/images/Result3.png?raw=true" width="300"/>
 </p>
 </ol>
 
